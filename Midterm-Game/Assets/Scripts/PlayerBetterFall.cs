@@ -6,6 +6,7 @@ public class PlayerBetterFall : MonoBehaviour {
 
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
+    public string input = "Player 1 Jump";
     Rigidbody2D rb;
 
     void Awake() {
@@ -15,7 +16,7 @@ public class PlayerBetterFall : MonoBehaviour {
     void Update(){
         if (rb.velocity.y < 0) {
             rb.velocity += Vector2.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-        } else if (rb.velocity.y > 0 && !Input.GetButton ("Jump")){
+        } else if (rb.velocity.y > 0 && !Input.GetButton (input)){
             rb.velocity += Vector2.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
     }

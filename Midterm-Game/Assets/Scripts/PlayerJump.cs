@@ -13,6 +13,7 @@ public class PlayerJump : MonoBehaviour {
     public bool canJump = false;
     public int jumpTimes = 0;
     public bool isAlive = true;
+    public string input = "Player 1 Jump";
     //public AudioSource JumpSFX;
 
     void Start()
@@ -29,7 +30,7 @@ public class PlayerJump : MonoBehaviour {
             canJump = false;
         }
 
-        if ((Input.GetButtonDown("Jump")) && (canJump) && (isAlive == true)) {
+        if ((Input.GetButtonDown(input)) && (canJump) && (isAlive == true)) {
             Jump();
         }
     }
