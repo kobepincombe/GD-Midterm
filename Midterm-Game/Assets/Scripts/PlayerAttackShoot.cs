@@ -19,7 +19,7 @@ public class PlayerAttackShoot : MonoBehaviour{
       void Update(){
            if (Time.time >= nextAttackTime){
                   //if (Input.GetKeyDown(KeyCode.Space))
-                 if (Input.GetAxis("input") > 0){
+                 if (Input.GetAxis(input) > 0){
                         playerFire();
                         nextAttackTime = Time.time + 1f / attackRate;
                   }
