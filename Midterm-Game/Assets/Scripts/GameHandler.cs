@@ -47,7 +47,7 @@ public class GameHandler : MonoBehaviour {
             GameisPaused = false;
       }
 
-      void Update () {
+      void Update() {
             if (Input.GetKeyDown(KeyCode.Escape)) {
                   if (GameisPaused) {
                         Resume();
@@ -55,23 +55,6 @@ public class GameHandler : MonoBehaviour {
                         Pause();
                   }
             }
-      }
-
-      void Pause() {
-            pauseMenuUI.SetActive(true);
-            Time.timeScale = 0f;
-            GameisPaused = true;
-      }
-
-      public void Resume() {
-            pauseMenuUI.SetActive(false);
-            Time.timeScale = 1f;
-            GameisPaused = false;
-      }
-
-      public void SetLevel (float sliderValue) {
-            mixer.SetFloat("MusicVolume", Mathf.Log10 (sliderValue) * 20);
-            volumeLevel = sliderValue;
       }
 
       private void UpdatePlayerSprites() {
@@ -115,7 +98,7 @@ public class GameHandler : MonoBehaviour {
       }
 
       public void player2GetHit(int damage) {
-            if (isDefending == false){
+            if (isDefending == false) {
                    player2Health -= damage;
                    if (player2Health >=0){
                          updateStatsDisplay();
@@ -163,9 +146,27 @@ public class GameHandler : MonoBehaviour {
       }
 
       public void RestartGame() {
+            Debug.Log("here");
             Time.timeScale = 1f;
             player1Health = player2Health = StartPlayerHealth;
             SceneManager.LoadScene("JCC");
+      }
+
+      void Pause() {
+            pauseMenuUI.SetActive(true);
+            Time.timeScale = 0f;
+            GameisPaused = true;
+      }
+
+      public void Resume() {
+            pauseMenuUI.SetActive(false);
+            Time.timeScale = 1f;
+            GameisPaused = false;
+      }
+
+      public void SetLevel (float sliderValue) {
+            mixer.SetFloat("MusicVolume", Mathf.Log10 (sliderValue) * 20);
+            volumeLevel = sliderValue;
       }
 
       public void QuitGame() {
