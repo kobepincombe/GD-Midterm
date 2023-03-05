@@ -116,7 +116,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5216146422982860187}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5, y: -1.48, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -259,9 +259,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 8236661427943087149}
   projectilePrefab: {fileID: 9038587120355556593, guid: 7bdfde9b3839b864fb072ea20986a6f8, type: 3}
-  projectileSpeed: 10
+  projectileSpeed: 8
   attackRate: 2
   input: Player2_Shoot
+  gravity: 1
 --- !u!114 &8236661428569470698
 MonoBehaviour:
   m_ObjectHideFlags: 0

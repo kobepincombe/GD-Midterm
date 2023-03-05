@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player1_1
+      name: Player1_100
       rect:
         serializedVersion: 2
         x: 79
@@ -137,7 +137,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player1_2
+      name: Player1_75
       rect:
         serializedVersion: 2
         x: 333
@@ -158,7 +158,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player1_5
+      name: Player1_0
       rect:
         serializedVersion: 2
         x: 592
@@ -179,7 +179,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player1_3
+      name: Player1_50
       rect:
         serializedVersion: 2
         x: 79
@@ -200,7 +200,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player1_4
+      name: Player1_25
       rect:
         serializedVersion: 2
         x: 333
@@ -231,11 +231,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player1_2: 424053143
-      Player1_5: 67887073
-      Player1_4: -352930617
-      Player1_1: 1910265018
-      Player1_3: -1640438064
+      Player1_25: -352930617
+      Player1_0: 67887073
+      Player1_100: 1910265018
+      Player1_50: -1640438064
+      Player1_75: 424053143
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

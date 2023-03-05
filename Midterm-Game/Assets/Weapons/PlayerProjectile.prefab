@@ -181,5 +181,5 @@ MonoBehaviour:
   damage: 10
   hitEffectAnim: {fileID: 2682885446976622169, guid: 995db35840480c3489ef96d74caa4a00, type: 3}
   SelfDestructTime: 0.5
-  SelfDestructVFX: 0.5
+  SelfDestructVFX: 0.12
   projectileArt: {fileID: 9038587119235809640}

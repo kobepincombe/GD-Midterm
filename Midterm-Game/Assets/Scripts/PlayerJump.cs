@@ -16,6 +16,8 @@ public class PlayerJump : MonoBehaviour {
     public string input = "Player 1 Jump";
     //public AudioSource JumpSFX;
 
+    private bool wasGrounded = false;
+
     void Start()
     {
         //anim = gameObject.GetComponentInChildren<Animator>();
@@ -24,34 +26,41 @@ public class PlayerJump : MonoBehaviour {
 
     void Update()
     {
-        if ((IsGrounded()) && (jumpTimes < 1)){
+        bool isGrounded = IsGrounded();
+        
+        if (isGrounded) {
+            jumpTimes = 0;
+        }
+        
+        if (isGrounded && !wasGrounded){
             canJump = true;
-        } if (jumpTimes > 1) {
+        } else if (jumpTimes > 1) {
             canJump = false;
         }
 
         if ((Input.GetButtonDown(input)) && (canJump) && (isAlive == true)) {
             Jump();
         }
+        
+        wasGrounded = isGrounded;
     }
 
     public void Jump()
     {
-        jumpTimes += 2;
+        jumpTimes += 1;
         rb.velocity = Vector2.up * jumpForce;
         // anim.SetTrigger("Jump");
         // JumpSFX.Play();
 
-        //Vector2 movement = new Vector2(rb.velocity.x, jumpForce);
-        //rb.velocity = movement;
+        // Vector2 movement = new Vector2(rb.velocity.x, jumpForce);
+        // rb.velocity = movement;
     }
 
     public bool IsGrounded() {
         Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, 2f, groundLayer);
         Collider2D enemyCheck = Physics2D.OverlapCircle(feet.position, 2f, enemyLayer);
         if ((groundCheck != null) || (enemyCheck != null)) {
-            //Debug.Log("I am trouching ground!");
-            jumpTimes = 0;
+            Debug.Log("I am touching ground!");
             return true;
         }
         return false;
