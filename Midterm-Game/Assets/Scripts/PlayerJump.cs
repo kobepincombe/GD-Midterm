@@ -60,7 +60,7 @@ public class PlayerJump : MonoBehaviour {
         Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, 2f, groundLayer);
         Collider2D enemyCheck = Physics2D.OverlapCircle(feet.position, 2f, enemyLayer);
         if ((groundCheck != null) || (enemyCheck != null)) {
-            Debug.Log("I am touching ground!");
+            //Debug.Log("I am touching ground!");
             return true;
         }
         return false;
