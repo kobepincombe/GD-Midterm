@@ -1,0 +1,72 @@
+.ButtonStyleOB {
+    height: 39px;
+    width: 196px;
+    white-space: nowrap;
+    background-color: rgb(231, 150, 36);
+    font-size: 24px;
+    -unity-font-style: bold;
+    -unity-text-outline-color: rgb(18, 11, 89);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left-color: rgb(20, 14, 106);
+    border-right-color: rgb(20, 14, 106);
+    border-top-color: rgb(20, 14, 106);
+    border-bottom-color: rgb(20, 14, 106);
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    color: rgb(13, 9, 72);
+}
+
+.ButtonStyleOB:hover {
+    height: 39px;
+    width: 196px;
+    white-space: nowrap;
+    background-color: rgb(230, 134, 35);
+    font-size: 24px;
+    -unity-font-style: bold;
+    -unity-text-outline-color: rgb(18, 11, 89);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left-color: rgb(20, 14, 106);
+    border-right-color: rgb(20, 14, 106);
+    border-top-color: rgb(20, 14, 106);
+    border-bottom-color: rgb(20, 14, 106);
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+}
+
+.ButtonStyleOB:active {
+    height: 39px;
+    width: 196px;
+    white-space: nowrap;
+    background-color: rgb(230, 109, 35);
+    font-size: 24px;
+    -unity-font-style: bold;
+    -unity-text-outline-color: rgb(18, 11, 89);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left-color: rgb(20, 14, 106);
+    border-right-color: rgb(20, 14, 106);
+    border-top-color: rgb(20, 14, 106);
+    border-bottom-color: rgb(20, 14, 106);
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    color: rgba(255, 255, 255, 255);
+}
