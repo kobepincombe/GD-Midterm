@@ -6,6 +6,7 @@
             <ui:Button text="Start Game" display-tooltip-when-elided="true" name="start-button" class="ButtonStyleOB" />
             <ui:Button text="How To Play" display-tooltip-when-elided="true" name="how-to-play" class="ButtonStyleOB" />
             <ui:Button text="Exit" display-tooltip-when-elided="true" name="exit-button" class="ButtonStyleOB" />
+            <ui:Label display-tooltip-when-elided="true" name="controls" style="height: 32px; width: 244px; color: rgb(0, 0, 0); -unity-text-align: upper-center; -unity-font-style: bold; font-size: 13px; display: none;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
