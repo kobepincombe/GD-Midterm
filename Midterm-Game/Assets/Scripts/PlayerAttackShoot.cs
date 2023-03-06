@@ -40,6 +40,7 @@ public class PlayerAttackShoot : MonoBehaviour{
       public string input = "Player1_Shoot";
       public float gravity = -9.81f; // acceleration due to gravity
       private float nextAttackTime = 0f;
+      //public AudioSource shootSFX;
 
       void Update(){
            if (Time.time >= nextAttackTime){

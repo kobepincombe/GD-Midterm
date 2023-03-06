@@ -1232,6 +1232,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2161901425785983362, guid: ee3020c2429ebde4cac9449985c6604d, type: 3}
+      propertyPath: shootSFX
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161901425785983362, guid: ee3020c2429ebde4cac9449985c6604d, type: 3}
       propertyPath: projectileSpeed
       value: 8
       objectReference: {fileID: 0}
@@ -1646,6 +1650,10 @@ PrefabInstance:
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 888222363780379707, guid: fbfd5164d5eb0284fbe3d438079aba8e, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9b0073306a6ce4c0697cfab7fc693867, type: 3}
     - target: {fileID: 3895116024105772772, guid: fbfd5164d5eb0284fbe3d438079aba8e, type: 3}
       propertyPath: m_RootOrder
       value: 6
