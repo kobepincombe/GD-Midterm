@@ -234,6 +234,11 @@ Transform:
   m_Father: {fileID: 1017404215}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &238402368 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3708980055644337234, guid: 791dc373b633ca743846bf28136571b2, type: 3}
+  m_PrefabInstance: {fileID: 1949720161}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &243811285
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,6 +862,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1250333387 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1372030160186040715, guid: 8916c72cbf82991479bdfa06378df75b, type: 3}
+  m_PrefabInstance: {fileID: 1351838990}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1351838990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -864,6 +874,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1372030160186040717, guid: 8916c72cbf82991479bdfa06378df75b, type: 3}
+      propertyPath: m_Name
+      value: Player2_100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718491419353296149, guid: 8916c72cbf82991479bdfa06378df75b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718491420220289820, guid: 8916c72cbf82991479bdfa06378df75b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 8887419106071353289, guid: 8916c72cbf82991479bdfa06378df75b, type: 3}
       propertyPath: m_Name
       value: Player 2
@@ -1116,6 +1138,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3708980055152224081, guid: 791dc373b633ca743846bf28136571b2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708980056269975486, guid: 791dc373b633ca743846bf28136571b2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 3708980056888189677, guid: 791dc373b633ca743846bf28136571b2, type: 3}
       propertyPath: m_Name
       value: Player 1
@@ -1336,11 +1366,11 @@ PrefabInstance:
     - target: {fileID: 4125306783182011226, guid: 103988f23aa4b3e46800df8fc992ac99, type: 3}
       propertyPath: player1SpriteRenderer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 238402368}
     - target: {fileID: 4125306783182011226, guid: 103988f23aa4b3e46800df8fc992ac99, type: 3}
       propertyPath: player2SpriteRenderer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1250333387}
     - target: {fileID: 4125306783182011227, guid: 103988f23aa4b3e46800df8fc992ac99, type: 3}
       propertyPath: m_RootOrder
       value: 5

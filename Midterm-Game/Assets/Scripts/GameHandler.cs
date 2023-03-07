@@ -29,7 +29,7 @@ public class GameHandler : MonoBehaviour {
       private Slider sliderVolumeCtrl;
       private string sceneName;
 
-      void Awake () {
+      void Awake() {
             SetLevel (volumeLevel);
             GameObject sliderTemp = GameObject.FindWithTag("PauseMenuSlider");
             if (sliderTemp != null){
@@ -53,7 +53,9 @@ public class GameHandler : MonoBehaviour {
 
       void Update() {
             if (Input.GetKeyDown(KeyCode.Escape)) {
-                  if (GameisPaused) {
+                  if (sceneName=="P1_Lose" || sceneName=="P2_Lose") {
+                        QuitGame();
+                  } else if (GameisPaused) {
                         Resume();
                   } else {
                         Pause();
