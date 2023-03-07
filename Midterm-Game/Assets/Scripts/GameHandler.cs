@@ -15,7 +15,8 @@ public class GameHandler : MonoBehaviour {
       private bool P1_isInvincible = false;
       private bool P2_isInvincible = false;
       private float invincibilityDurationSeconds = 0.25f;
-      public bool isDefending = false;
+      public bool P1_isDefending = false;
+      public bool P2_isDefending = false;
       public Sprite[] player1Sprites;
       public Sprite[] player2Sprites;
       public SpriteRenderer player1SpriteRenderer;
@@ -76,7 +77,7 @@ public class GameHandler : MonoBehaviour {
       }
 
       public void player1GetHit(int damage) {
-            if (isDefending == false){
+            if (P1_isDefending == false){
                   if (P1_isInvincible) return;
                   player1Health -= damage;
                   if (player1Health >=0){
@@ -102,7 +103,7 @@ public class GameHandler : MonoBehaviour {
       }
 
       public void player2GetHit(int damage) {
-            if (isDefending == false) {
+            if (P2_isDefending == false) {
                    if (P2_isInvincible) return;
                    player2Health -= damage;
                    if (player2Health >=0){
