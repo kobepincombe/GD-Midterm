@@ -8,9 +8,9 @@ using UnityEngine.Audio;
 public class GameHandler : MonoBehaviour {
 
       private GameObject player1, player2;
-      public static int player1Health = 100;
-      public static int player2Health = 100;
-      public int StartPlayerHealth = 100;
+      public static int player1Health = 500;
+      public static int player2Health = 500;
+      public int StartPlayerHealth = 500;
       public GameObject P1healthText, P2healthText;
       private bool P1_isInvincible = false;
       private bool P2_isInvincible = false;
@@ -41,9 +41,9 @@ public class GameHandler : MonoBehaviour {
             player1 = GameObject.FindWithTag("Player1");
             player2 = GameObject.FindWithTag("Player2");
             sceneName = SceneManager.GetActiveScene().name;
-            //if (sceneName=="MainMenu"){ //uncomment these two lines when the MainMenu exists
+            if (sceneName=="MainMenu")
                   player1Health = player2Health = StartPlayerHealth;
-            //}
+
             updateStatsDisplay();
 
             pauseMenuUI.SetActive(false);
@@ -173,11 +173,10 @@ public class GameHandler : MonoBehaviour {
       }
 
       public void StartGame() {
-            SceneManager.LoadScene("JCC");
+            SceneManager.LoadScene("MainMenuLEGIT");
       }
 
       public void RestartGame() {
-            Debug.Log("here");
             Time.timeScale = 1f;
             player1Health = player2Health = StartPlayerHealth;
             SceneManager.LoadScene("JCC");
@@ -201,11 +200,9 @@ public class GameHandler : MonoBehaviour {
       }
 
       public void QuitGame() {
-                #if UNITY_EDITOR
-                UnityEditor.EditorApplication.isPlaying = false;
-                #else
-                Application.Quit();
-                #endif
+            Time.timeScale = 1f;
+            player1Health = player2Health = StartPlayerHealth;
+            SceneManager.LoadScene("MainMenuLEGIT");
       }
 
       public void Credits() {
