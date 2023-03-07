@@ -30,7 +30,8 @@ public class ButtonCode : MonoBehaviour
     }
 
     void howToPlayButtonPressed() {
-        controls.text = "Player 1: WASD to move, \n L shift to throw \n Player 2: arrows to move, \n space to throw";
+        controls.text = "Player 1: WASD to move, \n L shift to throw, L alt to block";
+        controls.text += "\n Player 2: arrows to move, \n space to throw, R alt to block";
         controls.style.display = DisplayStyle.Flex;
     }
 }
