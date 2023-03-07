@@ -12,6 +12,9 @@ public class GameHandler : MonoBehaviour {
       public static int player2Health = 100;
       public int StartPlayerHealth = 100;
       public GameObject P1healthText, P2healthText;
+      private bool P1_isInvincible = false;
+      private bool P2_isInvincible = false;
+      private float invincibilityDurationSeconds = 0.25f;
       public bool isDefending = false;
       public Sprite[] player1Sprites;
       public Sprite[] player2Sprites;
@@ -74,6 +77,7 @@ public class GameHandler : MonoBehaviour {
 
       public void player1GetHit(int damage) {
             if (isDefending == false){
+                  if (P1_isInvincible) return;
                   player1Health -= damage;
                   if (player1Health >=0){
                         updateStatsDisplay();
@@ -91,14 +95,15 @@ public class GameHandler : MonoBehaviour {
             if (player1Health <= 0) {
                   player1Health = 0;
                   updateStatsDisplay();
-                  playerDies();
+                  playerDies(1);
             }
-
+            StartCoroutine(BecomeTemporarilyInvincible(1));
             UpdatePlayerSprites();
       }
 
       public void player2GetHit(int damage) {
             if (isDefending == false) {
+                   if (P2_isInvincible) return;
                    player2Health -= damage;
                    if (player2Health >=0){
                          updateStatsDisplay();
@@ -116,11 +121,25 @@ public class GameHandler : MonoBehaviour {
             if (player2Health <= 0){
                    player2Health = 0;
                    updateStatsDisplay();
-                   playerDies();
+                   playerDies(2);
             }
-
+            StartCoroutine(BecomeTemporarilyInvincible(2));
             UpdatePlayerSprites();
       }
+
+      private IEnumerator BecomeTemporarilyInvincible(int num)
+      {
+          if (num == 1) {
+              P1_isInvincible = true;
+              yield return new WaitForSeconds(invincibilityDurationSeconds);
+              P1_isInvincible = false;
+          } else {
+              P2_isInvincible = true;
+              yield return new WaitForSeconds(invincibilityDurationSeconds);
+              P2_isInvincible = false;
+          }
+      }
+
 
       public void updateStatsDisplay(){
             Text P1healthTextTemp = P1healthText.GetComponent<Text>();
@@ -129,16 +148,28 @@ public class GameHandler : MonoBehaviour {
             P2healthTextTemp.text = "P2 HEALTH:\n" + player2Health;
       }
 
-      public void playerDies(){
-            player1.GetComponent<PlayerHurt>().playerDead();
-            StartCoroutine(DeathPause());
+      public void playerDies(int num){
+            if (num == 1) {
+                player1.GetComponent<PlayerHurt>().playerDead();
+                StartCoroutine(DeathPause(1));
+            } else {
+                player2.GetComponent<PlayerHurt>().playerDead();
+                StartCoroutine(DeathPause(2));
+            }
       }
 
-      IEnumerator DeathPause(){
-            player1.GetComponent<PlayerMove>().isAlive = false;
-            player1.GetComponent<PlayerJump>().isAlive = false;
-            yield return new WaitForSeconds(1.0f);
-            SceneManager.LoadScene("EndLose");
+      IEnumerator DeathPause(int num){
+            if (num == 1) {
+                player1.GetComponent<PlayerMove>().isAlive = false;
+                player1.GetComponent<PlayerJump>().isAlive = false;
+                yield return new WaitForSeconds(1.0f);
+                SceneManager.LoadScene("P1_Lose");
+            } else {
+                player2.GetComponent<PlayerMove>().isAlive = false;
+                player2.GetComponent<PlayerJump>().isAlive = false;
+                yield return new WaitForSeconds(1.0f);
+                SceneManager.LoadScene("P2_Lose");
+            }
       }
 
       public void StartGame() {

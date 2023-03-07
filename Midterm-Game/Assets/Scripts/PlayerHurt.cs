@@ -14,7 +14,6 @@ public class PlayerHurt: MonoBehaviour{
 
       public void playerHit(){
             //animator.SetTrigger ("GetHurt");
-            //add I-frames to make fair
       }
 
       public void playerDead(){
